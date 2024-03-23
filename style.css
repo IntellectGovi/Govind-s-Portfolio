@@ -150,7 +150,7 @@ a{
   position: relative;
   width: 100vw;
   max-width: 1080px;
-  height: 90vh;
+  height: 100vh;
   gap: 300px;
   padding:0rem 12rem;
   text-align: center;
@@ -296,6 +296,240 @@ a{
 
 /* Project Section Start */
 
+.projects {
+  margin-top: 4rem;
+  background-color: #171616;
+}
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+.page-header {
+  padding-top: 30px;
+  color:var(--bgOrange);
+  text-align: center;
+  font-size: 90px;
+  font-family: hithere;
+  letter-spacing: 8px;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.project-card {
+  width: 80%;
+  height: 510px;
+  background-image: url(./projects/project1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  box-shadow: 0px 0px 40px #1f1f1f;
+}
+.project-card::after {
+  content: "";
+  color: #fff;
+  position: absolute;
+  background: #1f1f1f9a;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(1);
+}
+.project-card::before {
+  content: "";
+  color: #fff;
+  position: absolute;
+  background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.4s;
+}
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+  padding: 2em;
+  bottom: 20%;
+  position: absolute;
+  z-index: 5;
+  transition: all 0.4s;
+}
+.project-content-left {
+  left: 10%;
+}
+.project-content-right {
+  right: 10%;
+}
+.project-card:hover .project-content {
+  scale: 1.1;
+}
+.project-heading {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 3rem;
+  font-family: landingFont;
+  letter-spacing: 6px;
+}
+.project-sub-heading {
+  font-size: 16px;
+  width: 70%;
+  font-family: landingFont;
+  letter-spacing: 4px;
+}
+
+.btn-project {
+  border: none;
+  font-weight: 500;
+}
+.btn-project:hover {
+  border: none;
+}
+.btn-group {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+.icon {
+  cursor: pointer;
+  font-size: 35px;
+  transition: all 0.4s;
+  color: #fff;
+}
+.icon:hover {
+  color: #e84949;
+}
+.project-number {
+  position: absolute;
+  font-family: myfont;
+  font-size: 200px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  display: none;
+  z-index: 10;
+  transition-delay: 1s;
+  transition: transform 2s;
+}
+.project-number-left {
+  right: -40px;
+  top: -45px;
+}
+.project-number-right {
+  left: -40px;
+  top: -45px;
+}
+.project-card:hover .project-number {
+  display: block;
+  color: rgb(255, 255, 255);
+}
+.project-skill-container {
+  max-width: 60%;
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  transition: all 0.2s;
+  border-radius: 5px;
+}
+
+.project-skill {
+  width: 40px;
+}
+
+#project1 {
+  background-image: url(./images/projects/Project1.png);
+}
+#project2 {
+  background-image: url(./images/projects/Project2.png);
+  margin-left: 120px;
+}
+#project3 {
+  background-image: url(./images/projects/Project3.png);
+}
+#project4 {
+  background-image: url(./images//projects//Project4.png);
+  margin-left: 120px;
+}
+
+.repoLink{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width:1300px) {
+  .page-header {
+    padding-top: 30px;
+    color: var(--bgOrange);
+    text-align: center;
+    font-size: 40px;
+  }
+  .project-container {
+    padding: 5px;
+    margin: 10px;
+    gap: 60px;
+  }
+  .project-card {
+    width: 100%;
+    height: 300px;
+  }
+  .project-card {
+    background-size: cover;
+    background-position: center;
+  }
+  .project-content {
+    scale: 0.5;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  .project-content-left {
+    left: 0;
+  }
+  .project-heading {
+    font-size: 40px;
+    width: 100%;
+  }
+  .project-sub-heading {
+    width: 100%;
+  }
+  #project2 {
+    margin-left: 0;
+  }
+  #project4 {
+    margin-left: 0;
+  }
+  .project-skill-container {
+    width: 100%;
+  }
+  .project-skill {
+    width: 35px;
+  }
+  .project-card:hover .project-number {
+    display: none;
+  }
+  .project-card:hover .project-content {
+    scale: 0.55;
+  }
+}
+
+
+/* Project Section Start  */
 
 /* Skills Section Start */
 .skills-container {
